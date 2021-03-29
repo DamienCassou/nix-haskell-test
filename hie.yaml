@@ -1,0 +1,16 @@
+cradle:
+  multi:
+    # - path: "ignore/"
+    #   config: {cradle: {none: }}
+
+    - path: "src"
+      config: {cradle: {cabal: {component: "lib:nix-haskell-test"}}}
+
+    - path: "app"
+      config: {cradle: {cabal: {component: "nix-haskell-test:nix-haskell-test-exe"}}}
+
+    - path: "test"
+      config: {cradle: {cabal: {component: "nix-haskell-test:nix-haskell-test-test"}}}
+
+    - path: "bench"
+      config: {cradle: {cabal: {component: "nix-haskell-test:nix-haskell-test-bench"}}}
